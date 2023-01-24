@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "sales",
+				"folderPath": "sales2",
 				"fileSystem": "landing"
 			}
 		}
