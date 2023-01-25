@@ -5,13 +5,27 @@
 			"referenceName": "ls_AzureDataLakeStorage",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"ds_container": {
+				"type": "string"
+			},
+			"ds_directory": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "adventureworks/SalesBike/tabela_a",
-				"fileSystem": "landing"
+				"folderPath": {
+					"value": "@dataset().ds_directory",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().ds_container",
+					"type": "Expression"
+				}
 			},
 			"compressionCodec": "snappy"
 		},
