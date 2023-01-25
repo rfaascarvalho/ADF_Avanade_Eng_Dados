@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "parquet",
+				"fileName": "5m Sales Records.csv",
+				"folderPath": "sales2",
 				"fileSystem": "landing"
 			},
 			"columnDelimiter": ",",
