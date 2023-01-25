@@ -11,6 +11,12 @@
 			},
 			"ds_directory": {
 				"type": "string"
+			},
+			"container_par": {
+				"type": "string"
+			},
+			"directory_par": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
