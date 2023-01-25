@@ -10,8 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "5m_Sales_Records.parquet",
-				"folderPath": "sales2",
+				"folderPath": "adventureworks/SalesBike",
 				"fileSystem": "landing"
 			},
 			"compressionCodec": "snappy"
