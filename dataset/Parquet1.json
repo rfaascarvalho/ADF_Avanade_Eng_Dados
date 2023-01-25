@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "adventureworks/SalesBike",
+				"folderPath": "adventureworks/SalesBike/tabela_a",
 				"fileSystem": "landing"
 			},
 			"compressionCodec": "snappy"
