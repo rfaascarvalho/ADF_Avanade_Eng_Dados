@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "5m_Sales_Records.parquet",
 				"folderPath": "parquet",
 				"fileSystem": "landing"
 			},
