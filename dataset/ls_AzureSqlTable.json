@@ -13,12 +13,6 @@
 			"ds_schema_table": {
 				"type": "string",
 				"defaultValue": "salesLT"
-			},
-			"container_par": {
-				"type": "string"
-			},
-			"directory_par": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
