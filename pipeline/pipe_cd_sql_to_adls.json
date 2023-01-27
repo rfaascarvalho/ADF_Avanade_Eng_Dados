@@ -60,11 +60,11 @@
 						"referenceName": "Parquet1",
 						"type": "DatasetReference",
 						"parameters": {
-							"container_par": {
+							"ds_container": {
 								"value": "@pipeline().parameters.container_par",
 								"type": "Expression"
 							},
-							"directory_par": {
+							"ds_directory": {
 								"value": "@pipeline().parameters.directory_par",
 								"type": "Expression"
 							}
@@ -78,12 +78,6 @@
 				"type": "string"
 			},
 			"table_name_par": {
-				"type": "string"
-			},
-			"container_par": {
-				"type": "string"
-			},
-			"directory_par": {
 				"type": "string"
 			}
 		},
