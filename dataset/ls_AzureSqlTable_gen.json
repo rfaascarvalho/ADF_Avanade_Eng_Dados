@@ -1,5 +1,5 @@
 {
-	"name": "ls_AzureSqlTable",
+	"name": "ls_AzureSqlTable_gen",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_AzureSqlDatabase",
@@ -9,10 +9,6 @@
 			"ds_name_table": {
 				"type": "string",
 				"defaultValue": "salesLT.Product"
-			},
-			"ds_schema_table": {
-				"type": "string",
-				"defaultValue": "salesLT"
 			}
 		},
 		"annotations": [],
