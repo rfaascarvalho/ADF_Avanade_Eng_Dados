@@ -8,21 +8,15 @@
 		"parameters": {
 			"ds_name_table": {
 				"type": "string",
-				"defaultValue": "salesLT.Product"
+				"defaultValue": "Product"
+			},
+			"ds_schema_table": {
+				"type": "string",
+				"defaultValue": "salesLT"
 			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": [],
-		"typeProperties": {
-			"schema": {
-				"value": "@dataset().ds_schema_table",
-				"type": "Expression"
-			},
-			"table": {
-				"value": "@dataset().ds_name_table",
-				"type": "Expression"
-			}
-		}
+		"schema": []
 	}
 }
