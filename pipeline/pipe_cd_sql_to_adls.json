@@ -41,7 +41,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ls_AzureSqlTable",
+						"referenceName": "ls_AzureSqlTable_gen",
 						"type": "DatasetReference",
 						"parameters": {
 							"ds_name_table": {
