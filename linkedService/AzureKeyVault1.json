@@ -5,7 +5,6 @@
 		"type": "AzureKeyVault",
 		"typeProperties": {
 			"baseUrl": "https://akv-academy-curso.vault.azure.net/"
-		},
-		"description": "teste"
+		}
 	}
 }
