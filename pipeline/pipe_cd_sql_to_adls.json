@@ -262,6 +262,33 @@
 								"scriptBlockExecutionTimeout": "02:00:00"
 							}
 						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Web1",
+							"type": "WebActivity",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"url": "https://prod-82.eastus.logic.azure.com:443/workflows/3596f801638a4abd8b52eae6b5dab6ba/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5YIrZDt8DhAhQpkZ72Qa32bEmmeHiL9bTcG5gNMNFcI",
+								"method": "POST",
+								"body": {
+									"RUN_ID": "@{pipeline().RunId}",
+									"TIMESTAMP": "@{utcnow()}",
+									"TABLE_NAME": "@{pipeline().parameters.table_name_par}",
+									"ERROESCRIPTION": "NÃO EXISTE NOVOS REGISTROS PARA ESTÁ TABELA",
+									"TO": "r.souza.de.carvalho@avanade.com",
+									"SUBJECT": "INGESTÃO DIÁRIA"
+								}
+							}
+						}
 					]
 				}
 			}
