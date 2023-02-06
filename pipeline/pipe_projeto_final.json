@@ -125,11 +125,11 @@
 		"parameters": {
 			"schema_par": {
 				"type": "string",
-				"defaultValue": "salesLT"
+				"defaultValue": "dbo"
 			},
 			"table_name_par": {
 				"type": "string",
-				"defaultValue": "Customer"
+				"defaultValue": "watermark"
 			},
 			"container_par": {
 				"type": "string",
