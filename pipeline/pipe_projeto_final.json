@@ -3,16 +3,9 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data projeto final",
+				"name": "Copy data1",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "Lookup1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -24,10 +17,6 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": {
-							"value": "select * from @{pipeline().parameters.schema_par}.@{pipeline().parameters.table_name_par} where ModifiedDate > '@{variables('Last_modified')}' and ModifiedDate <= '@{variables('Max valor escrito')}'",
-							"type": "Expression"
-						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -82,54 +71,16 @@
 						}
 					}
 				]
-			},
-			{
-				"name": "Lookup1",
-				"type": "Lookup",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "AzureSqlSource",
-						"sqlReaderQuery": {
-							"value": "select * from dbo.watermark where table_name = '@{pipeline().parameters.table_name_par}'",
-							"type": "Expression"
-						},
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
-					},
-					"dataset": {
-						"referenceName": "ls_AzureSqlTable_gen",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_name_table": {
-								"value": "@pipeline().parameters.table_name_par",
-								"type": "Expression"
-							},
-							"ds_schema_table": {
-								"value": "@pipeline().parameters.schema_par",
-								"type": "Expression"
-							}
-						}
-					}
-				}
 			}
 		],
 		"parameters": {
 			"schema_par": {
 				"type": "string",
-				"defaultValue": "dbo"
+				"defaultValue": "SalesLT"
 			},
 			"table_name_par": {
 				"type": "string",
-				"defaultValue": "watermark"
+				"defaultValue": "Customer"
 			},
 			"container_par": {
 				"type": "string",
@@ -138,14 +89,6 @@
 			"directory_par": {
 				"type": "string",
 				"defaultValue": "adventureprojetofinalworks/incremental/Customer"
-			}
-		},
-		"variables": {
-			"Last_modified": {
-				"type": "String"
-			},
-			"Max valor escrito": {
-				"type": "String"
 			}
 		},
 		"annotations": []
