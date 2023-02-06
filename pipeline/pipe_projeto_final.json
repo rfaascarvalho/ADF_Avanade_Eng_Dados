@@ -88,7 +88,7 @@
 			},
 			"directory_par": {
 				"type": "string",
-				"defaultValue": "adventureprojetofinalworks/incremental/Customer"
+				"defaultValue": "Projetofinalworks/Full/Customer"
 			}
 		},
 		"annotations": []
