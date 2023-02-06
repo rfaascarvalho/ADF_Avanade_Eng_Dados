@@ -84,7 +84,7 @@
 			},
 			"container_par": {
 				"type": "string",
-				"defaultValue": "landing"
+				"defaultValue": "bronze"
 			},
 			"directory_par": {
 				"type": "string",
