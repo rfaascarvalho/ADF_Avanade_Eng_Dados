@@ -75,7 +75,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Filter1').output.value",
+						"value": "@activity('Filter1').output.Value",
 						"type": "Expression"
 					},
 					"isSequential": false,
@@ -92,10 +92,10 @@
 								},
 								"waitOnCompletion": true,
 								"parameters": {
-									"schema_par": "@{item().schema_par}",
-									"table_name_par": "@{item().table_name_par}",
-									"container_par": "@{item().container_par}",
-									"directory_par": "adventurefinalworks/incremental/@{item().table_name_par}"
+									"schema_par": "SalesLT",
+									"table_name_par": "@{item().table_name}",
+									"container_par": "landing",
+									"directory_par": "adventurefinalworks/incremental/@{item().table_name}"
 								}
 							}
 						}
