@@ -1,0 +1,32 @@
+{
+	"name": "pipe_cd_sql_to_incre_final",
+	"properties": {
+		"parameters": {
+			"schema_par": {
+				"type": "string",
+				"defaultValue": "salesLT"
+			},
+			"table_name_par": {
+				"type": "string",
+				"defaultValue": "Product"
+			},
+			"container_par": {
+				"type": "string",
+				"defaultValue": "landing"
+			},
+			"directory_par": {
+				"type": "string",
+				"defaultValue": "adventurefinalworks/incremental/Product"
+			}
+		},
+		"variables": {
+			"Last_modified": {
+				"type": "String"
+			},
+			"Max valor escrito": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
